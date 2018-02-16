@@ -24,9 +24,9 @@ import { Device } from '@ionic-native/device';
   templateUrl: 'notification.html'
 })
 export class NotificationPage {
+
   microgear_notification: any;
-  topic: any;
-  result: any;
+  
   constructor(public navCtrl: NavController, private firebase: Firebase, private device: Device) {
     this.microgear_notification = microgear_notification.create({
       device: this.device,
@@ -35,9 +35,6 @@ export class NotificationPage {
     this.microgear_notification.regisApplication("{APPKEY}", function(result) {
       console.log('regisApplication : ' + result);
     });
-  }
-  ionViewDidEnter() {
-
   }
 
   subscribe() {
@@ -57,6 +54,7 @@ export class NotificationPage {
       console.log('turnOnNotification : ' + result);
     });
   }
+  
   turnOff(){
     this.microgear_notification.turnOffNotification(function(result) {
       console.log('turnOffNotification : ' + result);
