@@ -1,10 +1,12 @@
 module.exports.create = create;
 
-const APIADDRESS = 'api.netpie.io';
+const APIADDRESS = 'tsdb1.netpie.io';
+const PORT = '443';
 
 function create(param) {
   var device_info;
   var firebase;
+  var owner_token;
 
   var httpsclient = require('https');
   var querystring = require('querystring');
@@ -149,7 +151,6 @@ function create(param) {
           mobile_appkey: that.mobile_appkey,
           status: 'on'
         }
-        console.log(postData)
         var postBody = querystring.stringify(postData);
         var opt = {
           host: APIADDRESS,
