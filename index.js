@@ -5,7 +5,6 @@ const APIADDRESS = 'api.netpie.io';
 function create(param) {
   var device_info;
   var firebase;
-  var owner_token;
 
   var httpsclient = require('https');
   var querystring = require('querystring');
