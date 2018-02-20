@@ -1,7 +1,6 @@
 module.exports.create = create;
 
-const APIADDRESS = 'test.netpie.io';
-const APIPORT = '443';
+const APIADDRESS = 'api.netpie.io';
 
 function create(param) {
   var device_info;
@@ -30,7 +29,6 @@ function create(param) {
       var opt = {
         host: APIADDRESS,
         path: '/mobile/regismobileapp',
-        port: APIPORT,
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -72,7 +70,6 @@ function create(param) {
         var opt = {
           host: APIADDRESS,
           path: '/mobile/subscribe',
-          port: APIPORT,
           method: 'POST',
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -115,7 +112,6 @@ function create(param) {
         var opt = {
           host: APIADDRESS,
           path: '/mobile/unsubscribe',
-          port: APIPORT,
           method: 'POST',
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -154,11 +150,11 @@ function create(param) {
           mobile_appkey: that.mobile_appkey,
           status: 'on'
         }
+        console.log(postData)
         var postBody = querystring.stringify(postData);
         var opt = {
           host: APIADDRESS,
           path: '/mobile/noticestatustp',
-          port: APIPORT,
           method: 'POST',
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -201,7 +197,6 @@ function create(param) {
         var opt = {
           host: APIADDRESS,
           path: '/mobile/noticestatustp',
-          port: APIPORT,
           method: 'POST',
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
