@@ -1,6 +1,6 @@
 module.exports.create = create;
 
-const APIADDRESS = 'tsdb1.netpie.io';
+const APIADDRESS = 'api.netpie.io';
 const PORT = '443';
 
 function create(param) {
