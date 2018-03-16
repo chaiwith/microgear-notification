@@ -43,8 +43,8 @@ function create(param) {
         });
         res.on('end', function() {
           if (buff) {
-            callback(buff);
             that.mobile_appkey = mobile_appkey;
+            callback(buff);
           }
         });
       });
